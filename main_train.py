@@ -53,7 +53,7 @@ if __name__ == '__main__':
         param_group.append(p)
 
     # Load training and validation file names.
-    with open('train_files_small.txt', 'r') as f_train, open('val_files_small.txt', 'r') as f_val:
+    with open('train_files.txt', 'r') as f_train, open('val_files.txt', 'r') as f_val:
         raw_train_files = f_train.read().splitlines()
         raw_val_files = f_val.read().splitlines()
         train_files = list(map(lambda file: join(train_params['dataset path'], file), raw_train_files))
