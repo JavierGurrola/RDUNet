@@ -14,7 +14,7 @@ train:
   dataset splits: 10
   device: cuda:0
   multi gpu: false
-  workers: 0
+  workers: 24
   dataset path: 'Path/To/Training/Dataset/Folder/DIV2K_train_HR'
   checkpoint path: 'checkpoints'
 val:
@@ -25,7 +25,7 @@ val:
   patch size: 256
   batch size: 4
   frequency: 1
-  workers: 0
+  workers: 24
   dataset path: 'Path/To/Validation/Dataset/Folder/DIV2K_valid_HR'
 test:
   noise levels:
