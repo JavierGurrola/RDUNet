@@ -5,9 +5,9 @@ clc;
 %% Dataset and noise level
 
 noise_level = 50;
-dataset_folder_image = 'Path/To/Validation/Dataset/CBSDS68';
-label_path = 'Path/To/Validation/Dataset/cbsd68_label_gray.mat';
-data_savepath = 'Path/To/Validation/Dataset/noisy_cbsd68_50_gray.mat';
+dataset_folder_image = '/mnt/Storage/Documents/Denoising/Dataset/CBSDS68';
+label_save_path = '/mnt/Storage/DenoisingProblem/cbsd68_label_gray.mat';
+data_save_path = '/mnt/Storage/DenoisingProblem/noisy_cbsd68_50_gray.mat';
 
 data = {}; label = {};
 
@@ -22,8 +22,8 @@ for i = 3 : n
     image = single(image) / 255;
     image = rgb2gray(image);
     noisy = imnoise(image, 'gaussian', 0, (noise_level/255)^2);
-    noisy(noisy<0)=0;
-    noisy(noisy>1)=1;
+    noisy(noisy < 0) = 0;
+    noisy(noisy > 1) = 1;
     
     count = count + 1;
     data{count} = noisy;
@@ -34,5 +34,5 @@ for i = 3 : n
     display('Percent complete(val)');
 end    
 
-save(label_path, 'label');
-save(data_savepath, 'data');
+save(label_save_path, 'label');
+save(data_save_path, 'data');

@@ -2,27 +2,6 @@ import random
 import torch
 import numpy as np
 from skimage import io, color
-from collections import OrderedDict
-
-
-def convert_tensor_to_img(image, min_val=0., max_val=1.):
-    if image.is_cuda:
-        image = image.cpu()
-    image.squeeze_().clamp_(min_val, max_val)
-    image = image.numpy()
-    if image.ndim > 2:
-        image = np.transpose(image, (1, 2, 0))
-
-    return image
-
-
-def correct_model_dict(state_dict):
-    new_state_dict = OrderedDict()
-    for key, value in state_dict.items():
-        new_key = key.replace('module.', '')
-        new_state_dict[new_key] = value
-
-    return new_state_dict
 
 
 def load_image(image_path, channels):
@@ -167,3 +146,27 @@ def separate_ensemble(ensemble, return_single=False):
         return img, ensemble_np[0]
     else:
         return img
+
+
+def predict_ensemble(model, ensemble, device):
+    """
+    Predict batch of images from an ensemble.
+    :param model: torch Module
+        Trained model to estimate denoised images.
+    :param ensemble: list
+        Images to estimate.
+    :param device: torch device
+        Device of the trained model.
+    :return: list
+        Estimated images of type numpy ndarray.
+    """
+    y_hat_ensemble = []
+
+    for x in ensemble:
+        x = x.to(device)
+
+        with torch.no_grad():
+            y_hat = model(x)
+            y_hat_ensemble.append(y_hat.cpu().detach().numpy().astype('float32'))
+
+    return y_hat_ensemble
