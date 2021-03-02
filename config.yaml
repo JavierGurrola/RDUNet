@@ -15,8 +15,8 @@ train:
   device: cuda:0
   multi gpu: false
   workers: 10
-  dataset path: '/home/javier/Documents/SISR/Dataset/DIV2K/DIV2K_train_HR'
-  checkpoint path: '/mnt/Storage/Documents/Denoising/RDUNet/Checkpoints'
+  dataset path: '/Path/To/Training/Dataset/DIV2K/DIV2K_train_HR'
+  checkpoint path: '/Path/To/Checkpoints'
 val:
   noise levels:
     - 10
@@ -26,7 +26,7 @@ val:
   batch size: 8
   frequency: 1
   workers: 24
-  dataset path: '/home/javier/Documents/SISR/Dataset/DIV2K/DIV2K_valid_HR'
+  dataset path: '/Path/To/Validation/Dataset/DIV2K/DIV2K_valid_HR'
 test:
   noise levels:
     - 10
@@ -34,8 +34,8 @@ test:
     - 50
   device: cuda:0
   padding: true
-  dataset path: '/mnt/Storage/DenoisingProblem'
-  results path: '/mnt/Storage/Documents/Denoising/RDUNet/Results/'
-  pretrained models path: '/mnt/Storage/Documents/Denoising/RDUNet/Pretrained'
+  dataset path: '/Path/To/Test/Dataset/Folder'
+  results path: '/Path/To/Predicted/Results/'
+  pretrained models path: '/Path/To/Pretrained/Models'
   save images: true
 ...
