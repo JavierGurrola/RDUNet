@@ -28,9 +28,7 @@ for i = 3 : n
     data{count} = noisy;
     label{count} = image;
     
-    
-    display(100 * (i - 2) / (n - 2));
-    display('Percent complete(val)');
+    fprintf('Percent complete: %f\n', 100 * (i - 2) / (n - 2));
 end    
 
 save(label_save_path, 'label');
