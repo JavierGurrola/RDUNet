@@ -68,10 +68,10 @@ To test the model use the following command:
 Results reported in the paper.
 
 Color:
-![Color](https://github.com/JavierGurrola/RDUNet/blob/Some-Fixes/Figs/Color.png)
+![Color](https://github.com/JavierGurrola/RDUNet/blob/main/Figs/Color.png)
 
 Grayscale:
-![Grayscale](https://github.com/JavierGurrola/RDUNet/blob/Some-Fixes/Figs/Grayscale.png)
+![Grayscale](https://github.com/JavierGurrola/RDUNet/blob/main/Figs/Grayscale.png)
 
 ## Contact
 
