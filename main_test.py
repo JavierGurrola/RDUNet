@@ -37,7 +37,7 @@ def predict(model, noisy_dataset, gt_dataset, device, padding, n_channels, resul
             y_hat_ens = predict_ensemble(model, x, device)
             y_hat_ens, y_hat = separate_ensemble(y_hat_ens, return_single=True)
 
-            if not padding:
+            if padding:
                 y_hat = y_hat[:size[0], :size[1], ...]
                 y_hat_ens = y_hat_ens[:size[0], :size[1], ...]
 
@@ -88,13 +88,13 @@ if __name__ == '__main__':
 
     if n_channels == 3:
         model_path = join(test_params['pretrained models path'], 'model_color.pth')
-        noisy_datasets = ['noisy_cbsd68_']
+        noisy_datasets = ['noisy_cbsd68_']  # Also tested in Kodak24 and Urban100 datasets.
         gt_datasets = ['cbsd68_label']
 
     else:
         model_path = join(test_params['pretrained models path'], 'model_gray.pth')
-        noisy_datasets = ['noisy_cbsd68_']
-        gt_datasets = ['cbsd68_label']
+        noisy_datasets = ['noisy_set12_']   # Also tested in BSD68 and Kodak24 datasets.
+        gt_datasets = ['set12_label']
 
     model_params = config['model']
     model = RDUNet(**model_params)
@@ -117,7 +117,9 @@ if __name__ == '__main__':
             label_path = join(test_params['dataset path'], ''.join([gt_dataset, extension, '.mat']))
 
             if test_params['save images']:
-                save_path = join(test_params['results path'], ''.join([noisy_dataset, '_sigma_', str(noise_level)]))
+                save_path = join(
+                    test_params['results path'], ''.join([noisy_dataset.replace('noisy_', ''), 'sigma_', str(noise_level)])
+                )
             else:
                 save_path = None
 
