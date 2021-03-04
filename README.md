@@ -59,7 +59,7 @@ Grayscale:
 
 ## Citation
 
-If you us this paper work in your research or work, please cite our paper:
+If you use this paper work in your research or work, please cite our paper:
 ```
 @article{gurrola2021residual,
   title={A Residual Dense U-Net Neural Network for Image Denoising},
