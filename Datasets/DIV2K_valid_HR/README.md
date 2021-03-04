@@ -1,1 +1,1 @@
-Training dataset folder.
+Validation dataset folder.
