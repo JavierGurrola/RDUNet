@@ -15,7 +15,7 @@ train:
   device: cuda:0
   multi gpu: false
   workers: 10
-  dataset path: 'DatasetS/DIV2K_train_HR'
+  dataset path: 'Datasets/DIV2K_train_HR'
   checkpoint path: 'Checkpoints'
 val:
   noise levels:
@@ -34,7 +34,7 @@ test:
     - 50
   device: cuda:0
   padding: true
-  dataset path: 'Dataset/Test'
+  dataset path: 'Datasets/Test'
   results path: 'Results'
   pretrained models path: 'Pretrained'
   save images: true
