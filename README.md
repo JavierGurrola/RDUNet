@@ -4,6 +4,22 @@ This repository is for the RDUNet model proposed in the following paper:
 
 [Javier Gurrola-Ramos](https://scholar.google.com.mx/citations?user=NuhdwkgAAAAJ&hl=es), [Oscar Dalmau](https://scholar.google.com.mx/citations?user=5oUOG4cAAAAJ&hl=es&oi=sra) and [Teresa E. Alarcón](https://scholar.google.com.mx/citations?user=gSUClZYAAAAJ&hl=es&authuser=1), ["A Residual Dense U-Net Neural Network for Image Denoising"](https://ieeexplore.ieee.org/document/9360532), IEEE Access, vol. 9, pp. 31742-31754, 2021, doi: 10.1109/ACCESS.2021.3061062.
 
+## Citation
+
+If you use this paper work in your research or work, please cite our paper:
+```
+@article{gurrola2021residual,
+  title={A Residual Dense U-Net Neural Network for Image Denoising},
+  author={Gurrola-Ramos, Javier and Dalmau, Oscar and Alarcón, Teresa E},
+  journal={IEEE Access},
+  volume={9},
+  pages={31742--31754},
+  year={2021},
+  publisher={IEEE},
+  doi={10.1109/ACCESS.2021.3061062}
+}
+```
+
 ![RDUNet](https://github.com/JavierGurrola/RDUNet/blob/main/Figs/Architecture.jpg)
 
 ## Dependencies
@@ -56,22 +72,6 @@ Color:
 
 Grayscale:
 ![Grayscale](https://github.com/JavierGurrola/RDUNet/blob/Some-Fixes/Figs/Grayscale.png)
-
-## Citation
-
-If you use this paper work in your research or work, please cite our paper:
-```
-@article{gurrola2021residual,
-  title={A Residual Dense U-Net Neural Network for Image Denoising},
-  author={Gurrola-Ramos, Javier and Dalmau, Oscar and Alarcón, Teresa E},
-  journal={IEEE Access},
-  volume={9},
-  pages={31742--31754},
-  year={2021},
-  publisher={IEEE},
-  doi={10.1109/ACCESS.2021.3061062}
-}
-```
 
 ## Contact
 
