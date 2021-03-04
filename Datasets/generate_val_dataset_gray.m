@@ -5,9 +5,9 @@ clc;
 %% Dataset and noise level
 
 noise_level = 50;
-dataset_folder_image = '/mnt/Storage/Documents/Denoising/Dataset/CBSDS68';
-label_save_path = '/mnt/Storage/DenoisingProblem/cbsd68_label_gray.mat';
-data_save_path = '/mnt/Storage/DenoisingProblem/noisy_cbsd68_50_gray.mat';
+dataset_folder_image = '/Path/To/Dataset/Folders/CBSDS68';
+label_save_path = 'Test/cbsd68_label_gray.mat';
+data_save_path = 'Test/noisy_cbsd68_50_gray.mat';
 
 data = {}; label = {};
 
@@ -29,9 +29,7 @@ for i = 3 : n
     data{count} = noisy;
     label{count} = image;
     
-    
-    display(100 * (i - 2) / (n - 2));
-    display('Percent complete(val)');
+    fprintf('Percent complete: %f\n', 100 * (i - 2) / (n - 2));
 end    
 
 save(label_save_path, 'label');
