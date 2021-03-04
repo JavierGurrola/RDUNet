@@ -37,7 +37,7 @@ def predict(model, noisy_dataset, gt_dataset, device, padding, n_channels, resul
             y_hat_ens = predict_ensemble(model, x, device)
             y_hat_ens, y_hat = separate_ensemble(y_hat_ens, return_single=True)
 
-            if not padding:
+            if padding:
                 y_hat = y_hat[:size[0], :size[1], ...]
                 y_hat_ens = y_hat_ens[:size[0], :size[1], ...]
 
