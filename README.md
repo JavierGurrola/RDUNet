@@ -4,7 +4,7 @@ This repository is for the RDUNet model proposed in the following paper:
 
 [Javier Gurrola-Ramos](https://scholar.google.com.mx/citations?user=NuhdwkgAAAAJ&hl=es), [Oscar Dalmau](https://scholar.google.com.mx/citations?user=5oUOG4cAAAAJ&hl=es&oi=sra) and [Teresa E. Alarcón](https://scholar.google.com.mx/citations?user=gSUClZYAAAAJ&hl=es&authuser=1), ["A Residual Dense U-Net Neural Network for Image Denoising"](https://ieeexplore.ieee.org/document/9360532), IEEE Access, vol. 9, pp. 31742-31754, 2021, doi: 10.1109/ACCESS.2021.3061062.
 
-![RDUNet](https://github.com/JavierGurrola/RDUNet/main/Figs/Architecture.jpg)
+![RDUNet](https://github.com/JavierGurrola/RDUNet/blob/main/Figs/Architecture.jpg)
 
 ## Dependencies
 - Python 3.6
