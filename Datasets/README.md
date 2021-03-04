@@ -1,1 +1,1 @@
-Add the dataset to this folder.
+Add the training, validation, and testing datasets to this folder.
