@@ -6,8 +6,8 @@ clc;
 
 noise_level = 50;
 dataset_folder_image = '/Path/To/Datasets/Folder/CBSDS68';
-label_save_path = 'Test/cbsd68_label_gray.mat';
-data_save_path = 'Test/noisy_cbsd68_50_gray.mat';
+label_save_path = 'Test/bsd68_label_gray.mat';
+data_save_path = 'Test/noisy_bsd68_50_gray.mat';
 
 data = {}; label = {};
 
