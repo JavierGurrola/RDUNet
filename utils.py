@@ -1,7 +1,7 @@
 import random
 import torch
 import numpy as np
-from skimage import io, color
+from skimage import io, color, img_as_ubyte
 
 
 def load_image(image_path, channels):
@@ -17,9 +17,11 @@ def load_image(image_path, channels):
     image = io.imread(image_path)
 
     if image.ndim == 3 and channels == 1:       # Convert from RGB to Grayscale and expand dims.
-        image = color.rgb2gray(image)
+        image = img_as_ubyte(color.rgb2gray(image))
         return np.expand_dims(image, axis=-1)
     elif image.ndim == 2 and channels == 1:     # Handling grayscale images if needed.
+        if image.dtype != 'uint8':
+            image = img_as_ubyte(image)
         return np.expand_dims(image, axis=-1)
 
     return image
