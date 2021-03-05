@@ -22,11 +22,11 @@ class AdditiveWhiteGaussianNoise(object):
         image = sample.get('image')
 
         if image.ndim == 4:                 # if 'image' is a batch of images, we set a different noise level per image
-            batches = image.shape[0]        # (Samples, Height, Width, Channels) or (Samples, Channels, Height, Width)
+            samples = image.shape[0]        # (Samples, Height, Width, Channels) or (Samples, Channels, Height, Width)
             if self.fix_sigma:
-                sigma = self.noise_level * np.ones((batches, 1, 1, 1))
+                sigma = self.noise_level * np.ones((samples, 1, 1, 1))
             else:
-                sigma = np.random.choice(self.predefined_noise) * np.ones((batches, 1, 1, 1))
+                sigma = np.random.choice(self.predefined_noise, size=(samples, 1, 1, 1))
             noise = self.rand.normal(0., 1., size=image.shape)
             noise = noise * sigma
         else:                               # else, 'image' is a simple image
@@ -42,34 +42,6 @@ class AdditiveWhiteGaussianNoise(object):
             noisy = np.clip(noisy, 0., 255.)
 
         return {'image': image, 'noisy': noisy.astype('float32')}
-
-
-class RandomCrop(object):
-    """Random crop generator."""
-
-    def __init__(self, crop_size):
-        assert isinstance(crop_size, (list, tuple)) or isinstance(crop_size, int)
-        if isinstance(crop_size, (list, tuple)):
-            self.crop_size = crop_size
-        elif isinstance(crop_size, int):
-            self.crop_size = (crop_size, crop_size)
-
-    def __call__(self, sample):
-        """
-        Generates a random patch from 'image' with size 'crop_size'.
-        :param sample: image to crop and its respective image map.
-        :return: sample with cropped image and edge map.
-        """
-        image = sample.get('image')
-        height, width = image.shape[:2]
-        new_height, new_width = self.crop_size
-
-        top = np.random.randint(0, height - new_height)
-        left = np.random.randint(0, width - new_width)
-
-        image = image[top: top + new_height, left: left + new_width]
-
-        return {'image': image, 'noisy': sample.get('noisy')}
 
 
 class ToTensor(object):
