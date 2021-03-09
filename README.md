@@ -22,6 +22,10 @@ If you use this paper work in your research or work, please cite our paper:
 
 ![RDUNet](https://github.com/JavierGurrola/RDUNet/blob/main/Figs/Architecture.jpg)
 
+## Pre-trained models
+
+[Link](https://drive.google.com/drive/folders/1jF8YF-7SoVpc4y39_lFl25OBFVQmZAWJ?usp=sharing) to download the pretrained models.
+
 ## Dependencies
 - Python 3.6
 - PyTorch 1.5.1
@@ -55,7 +59,7 @@ To train the model use the following command:
 
 ## Test
 
-Download the [pre-trained models](https://drive.google.com/drive/folders/1jF8YF-7SoVpc4y39_lFl25OBFVQmZAWJ?usp=sharing) and place them in the './Pretrained' folder. Modify the ```config.yaml``` file according to the model you want to use: ```model channels: 3``` for the color model and ```model channels: 1``` for the grayscale model.
+Place the pretrained models in the './Pretrained' folder. Modify the ```config.yaml``` file according to the model you want to use: ```model channels: 3``` for the color model and ```model channels: 1``` for the grayscale model.
 
 Test datasets need to be prepared using the MATLAB codes in './Datasets' folder according to the desired noise level. Wee test the RDUNet model we use the [Set12](https://github.com/cszn/DnCNN/tree/master/testsets), [CBSD68](https://github.com/cszn/FFDNet/tree/master/testsets/CBSD68), [Kodak24](http://r0k.us/graphics/kodak/), and [Urban100](https://drive.google.com/drive/folders/1miKn9Jn-t7w6fg8uGZoRGre1juRQDZVy?usp=sharing) datasets.
 
