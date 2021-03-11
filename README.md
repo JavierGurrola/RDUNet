@@ -61,7 +61,7 @@ To train the model use the following command:
 
 Place the pretrained models in the './Pretrained' folder. Modify the ```config.yaml``` file according to the model you want to use: ```model channels: 3``` for the color model and ```model channels: 1``` for the grayscale model.
 
-Test datasets need to be prepared using the MATLAB codes in './Datasets' folder according to the desired noise level. Wee test the RDUNet model we use the [Set12](https://github.com/cszn/DnCNN/tree/master/testsets), [CBSD68](https://github.com/cszn/FFDNet/tree/master/testsets/CBSD68), [Kodak24](http://r0k.us/graphics/kodak/), and [Urban100](https://drive.google.com/drive/folders/1miKn9Jn-t7w6fg8uGZoRGre1juRQDZVy?usp=sharing) datasets.
+Test datasets need to be prepared using the MATLAB codes in './Datasets' folder according to the desired noise level. We test the RDUNet model we use the [Set12](https://github.com/cszn/DnCNN/tree/master/testsets), [CBSD68](https://github.com/cszn/FFDNet/tree/master/testsets/CBSD68), [Kodak24](http://r0k.us/graphics/kodak/), and [Urban100](https://drive.google.com/drive/folders/1miKn9Jn-t7w6fg8uGZoRGre1juRQDZVy?usp=sharing) datasets.
 
 To test the model use the following command:
 
