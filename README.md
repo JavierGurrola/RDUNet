@@ -1,8 +1,8 @@
-# Residual Dense U-Net for Image Denoising
+# A Residual Dense U-Net for Image Denoising
 
 This repository is for the RDUNet model proposed in the following paper:
 
-[Javier Gurrola-Ramos](https://scholar.google.com.mx/citations?user=NuhdwkgAAAAJ&hl=es), [Oscar Dalmau](https://scholar.google.com.mx/citations?user=5oUOG4cAAAAJ&hl=es&oi=sra) and [Teresa E. Alarcón](https://scholar.google.com.mx/citations?user=gSUClZYAAAAJ&hl=es&authuser=1), ["A Residual Dense U-Net Neural Network for Image Denoising"](https://ieeexplore.ieee.org/document/9360532), IEEE Access, vol. 9, pp. 31742-31754, 2021, doi: 10.1109/ACCESS.2021.3061062.
+[Javier Gurrola-Ramos](https://scholar.google.com.mx/citations?user=NuhdwkgAAAAJ&hl=es), [Oscar Dalmau](https://scholar.google.com.mx/citations?user=5oUOG4cAAAAJ&hl=es&oi=sra) and [Teresa E. Alarcón](https://scholar.google.com.mx/citations?user=gSUClZYAAAAJ&hl=es&authuser=1), ["A Residual Dense U-Net Neural Network for Image Denoising"](https://ieeexplore.ieee.org/document/9360532), IEEE Access, vol. 9, pp. 31742-31754, 2021, doi: [10.1109/ACCESS.2021.3061062](https://doi.org/10.1109/ACCESS.2021.3061062).
 
 ## Citation
 
