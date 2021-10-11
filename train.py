@@ -38,7 +38,8 @@ class EpochLogger:
             Number of evaluated samples.
         :param phase: str
             Phase of the current epoch: training (train) or validation (val).
-        :return:
+        :return: dic
+            Log of the current phase in the training.
         """
         log = {
             phase + ' loss': self.log[phase + ' loss'] / n_samples,
@@ -73,7 +74,7 @@ class FileLogger(object):
         Updates the CSV record file.
         :param epoch_log: dict
             Log of the current epoch.
-        :return: 
+        :return: None
         """
 
         # Format log file:
@@ -125,7 +126,7 @@ def fit_model(model, data_loaders, channels, criterion, optimizer, scheduler, de
         Path to the directory where the model checkpoints and CSV log files will be stored.
     :param model_name: str
         Prefix name of the trained model saved in checkpoint_dir.
-    :return:
+    :return: None
     """
     psnr = PSNR(data_range=1., reduction='sum')
     ssim = SSIM(channels, data_range=1., reduction='sum')
