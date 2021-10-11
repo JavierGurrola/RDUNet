@@ -119,6 +119,8 @@ def fit_model(model, data_loaders, channels, criterion, optimizer, scheduler, de
         Device used during training (CPU/GPU).
     :param n_epochs: int
         Number of epochs to fit the model.
+    :param val_freq: int
+        How many training epochs to run between validations.
     :param checkpoint_dir: str
         Path to the directory where the model checkpoints and CSV log files will be stored.
     :param model_name: str
