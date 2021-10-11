@@ -55,7 +55,7 @@ class FileLogger(object):
     The results are recorded in a CSV files.
 
     Args:
-        ile_path (string): path of the csv file.
+        file_path (string): path of the csv file.
     """
     def __init__(self, file_path):
         """
