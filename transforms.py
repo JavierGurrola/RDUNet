@@ -15,7 +15,7 @@ class AdditiveWhiteGaussianNoise(object):
 
     def __call__(self, sample):
         """
-        Generates additive white gaussian noise in
+        Generates additive white gaussian noise, and it is applied to the clean image.
         :param sample:
         :return:
         """
