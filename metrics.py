@@ -39,6 +39,7 @@ class SSIM(object):
     It can return a result with different reduction methods.
 
     Args:
+        channels (int): Number of channels of the images.
         data_range (int, float): Range of the input images.
         reduction (string): Specifies the reduction to apply to the output:
             ``'none'`` | ``'mean'`` | ``'sum'``. ``'none'``: no reduction will be applied,
